@@ -8,14 +8,18 @@ const Blog = () => (
   <div>There should be a blog overview here</div>
 );
 
-const Router = () => (
+const Router = ({ children }) => (
   <BrowserRouter>
-    <Switch>
-      <Route exact path="/" component={HomePage} />
-      <Route exact path="/frontend-blog" component={Blog} />
-      <Route exact path="/frontend-blog/:slug" component={PostPage} />
-    </Switch>
+    <React.Fragment>
+      {children}
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+        <Route exact path="/frontend-blog" component={Blog} />
+        <Route exact path="/frontend-blog/:slug" component={PostPage} />
+      </Switch>
+    </React.Fragment>
   </BrowserRouter>
+
 );
 
 export default Router;

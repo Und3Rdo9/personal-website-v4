@@ -1,15 +1,13 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 const Navigation = () => (
   <ul>
     <li>
-      <a href="">link1</a>
+      <Link to="/">Home</Link>
     </li>
     <li>
-      <a href="">link2</a>
-    </li>
-    <li>
-      <a href="">link3</a>
+      <Link to="/frontend-blog">Blog</Link>
     </li>
   </ul>
 );

@@ -3,10 +3,9 @@ import Router from './components/routes/Router';
 import Header from './components/header/Header';
 
 const App = () => (
-  <div>
+  <Router>
     <Header />
-    <Router />
-  </div>
+  </Router>
 );
 
 export default App;
