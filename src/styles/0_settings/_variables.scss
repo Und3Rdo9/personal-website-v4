@@ -1,0 +1,49 @@
+// COLORS
+$theme-color-primary:     #FFEB3B;
+$theme-color-secondary:   #FFF59D;
+$theme-color-tertiary:    #000000;
+$theme-color-quarternary: #F5F5F5;
+
+$white:                   white;
+$black:                   $theme-color-tertiary;
+
+// FONTS
+$font-path:               'assets/fonts';
+$font-name:               'EuclidCircularBTrial';
+$theme-font-primary:      'Font';
+
+$fw-regular:  400;
+$fw-light:    300;
+$fw-medium:   500;
+$fw-semibold: 600;
+$fw-bold:     700;
+
+@mixin fontdef-woff($font-path, $font-name, $font-type) {
+  src: url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.woff2')
+  format('woff2'),
+  url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.woff')
+  format('woff'),
+  url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.ttf')
+  format('truetype');
+}
+
+// BEGIN Regular
+@font-face {
+  @include fontdef-woff($font-path, $font-name, 'Regular');
+  font-family: $theme-font-primary;
+  font-weight: $fw-regular;
+  font-style: normal;
+}
+
+// BEGIN Regular
+@font-face {
+  @include fontdef-woff($font-path, $font-name, 'Bold');
+  font-family: $theme-font-primary;
+  font-weight: $fw-bold;
+  font-style: normal;
+}
+
+* {
+  font-family: $theme-font-primary;
+  font-weight: $fw-regular;
+}

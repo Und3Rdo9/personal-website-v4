@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
+import Hero from './../hero/Hero';
+import UspList from './../usp/UspList';
 
-import './../../App.css';
 
 class HomePage extends Component {
   render() {
     return (
-      <div className="App">
-        <main>
-          <h1 className="App-title">Welcome to React</h1>
-          <p>this is the homepage</p>
-        </main>
+      <div>
+        <Hero
+          title="Tim Bakkum"
+          underline="Amsterdam based frontend developer"
+          imageSrc="http://via.placeholder.com/350x350"
+        />
+        <UspList
+
+        />
       </div>
     );
   }

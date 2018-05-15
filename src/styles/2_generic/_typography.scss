@@ -1,0 +1,50 @@
+$sgl-debug-mode: false;
+$sgl-extras: false;
+
+// sgl overrides
+$sgl-base-font-size: 18;
+$sgl-base-line-height: 1.5;
+$sgl-base-unit: "rem";
+$sgl-scale-factor: 1.5;
+
+@import "sassy-gridlover/sassy-gridlover/_sassy-gridlover.scss";
+
+html {
+    @include sgl-html();
+}
+
+body {
+    @include sgl-body("rem");
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $theme-font-primary;
+  font-weight: $fw-bold;
+  @include sgl-margins();
+}
+
+h1 {
+    @include sgl-heading(3, "rem");
+}
+
+h2 {
+    @include sgl-heading(2, "rem");
+}
+
+h3 {
+    @include sgl-heading(1, "rem");
+
+}
+
+h4, h5, h6 {
+    @include sgl-heading(0);
+}
+
+p,
+ul,
+ol,
+pre,
+table,
+blockquote {
+    @include sgl-margins();
+}

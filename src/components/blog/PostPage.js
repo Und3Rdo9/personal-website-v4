@@ -1,6 +1,7 @@
 import React from 'react';
 import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
+import ReactMarkdown from 'react-markdown';
 
 const GET_POST = gql`
 query post($slug: String!) {
@@ -12,23 +13,26 @@ query post($slug: String!) {
     dateAndTime
     summary
     tags
+    content
   }
 }
 `;
 
 const PostPage = ( {match} ) => (
   <div>
-    <h1>{match.params.slug}</h1>
     <Query query={GET_POST} variables={{ slug: match.params.slug }}>
       {( { loading, error, data } ) => {
         if (loading) return <div>Loading...</div>;
         if (error) return <div>Error :(</div>;
           if (data.Post) {
             return (
-              <article>
+              <article className="container">
                 <h1>{data.Post.title}</h1>
                 <p>{`by ${data.Post.authors[0].name}`}</p>
                 <p>{data.Post.postsummary}</p>
+                <main>
+                  <ReactMarkdown source={data.Post.content} />
+                </main>
               </article>
             )
           }
