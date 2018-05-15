@@ -1,0 +1,17 @@
+$header-icon-size: 75px;
+$header-icon-padding: 10px;
+$header-icon-background: $theme-color-primary;
+
+.header-icon {
+  width: $header-icon-size;
+  height: $header-icon-size;
+  display: block;
+  background: $header-icon-background;
+  padding: $header-icon-padding;
+
+  &__img {
+    width: $header-icon-size - ($header-icon-padding * 2);
+    height: $header-icon-size - ($header-icon-padding * 2);
+    display: block;
+  }
+}

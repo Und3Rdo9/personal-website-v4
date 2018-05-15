@@ -3,4 +3,10 @@
 @import '1_tools/_align';
 
 @import '2_generic/_normalize';
+@import '2_generic/_box-sizing';
 @import '2_generic/_typography';
+
+@import '4_objects/_header-icon';
+@import '4_objects/_navigation';
+
+@import '5_components/_header';
