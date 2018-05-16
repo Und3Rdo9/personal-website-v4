@@ -1,0 +1,91 @@
+$hero-child-max-width-small: 290px;
+$hero-figure-width: $hero-child-max-width-small;
+$hero-figure-height: 250px;
+$hero-figure-padding: 30px;
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include tablet() {
+
+    @supports(display: grid) {
+      display: grid;
+      grid-template-columns: $hero-child-max-width-small 1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 50px;
+      align-items: start;
+    }
+  }
+
+  &__title {
+    font-size: 52px;
+    @include sgl-margins;
+    text-align: center;
+    max-width: $hero-child-max-width-small;
+
+    @include tablet() {
+      max-width: none;
+      text-align: left;
+      align-self: end;
+      margin-bottom: 0;
+
+      @supports(display: grid) {
+        grid-column: 2;
+      }
+    }
+  }
+
+  &__figure {
+    display: block;
+    padding: $hero-figure-padding $hero-figure-padding 0 0;
+    background-color: transparent;
+    background-image: url('./assets/images/hero-background.svg');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: ($hero-figure-width - $hero-figure-padding) auto;
+    width: $hero-figure-width;
+    height: $hero-figure-height;
+    @include sgl-margins;
+
+    @include tablet() {
+      @supports(display: grid) {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @supports (object-fit: cover) {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0 0;
+    }
+
+
+  }
+
+  &__underline {
+    font-size: 19px;
+    font-family: $theme-font-primary;
+    font-weight: $fw-light;
+    text-align: center;
+    max-width: $hero-child-max-width-small;
+
+    @include tablet() {
+      max-width: none;
+      text-align: left;
+
+      @supports(display: grid) {
+        grid-column: 2;
+      }
+    }
+  }
+}

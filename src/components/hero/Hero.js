@@ -7,10 +7,12 @@ import PropTypes from 'prop-types';
 export class Hero extends Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
-        <img src={this.props.imageSrc} alt=""/>
-        <h1>{this.props.title}</h1>
-        <p>{this.props.underline}</p>
+      <div className='hero'>
+        <h1 className='hero__title'>{this.props.title}</h1>
+        <figure class="hero__figure">
+          <img className='hero__img' src={this.props.imageSrc} alt='Tim Bakkum'/>
+        </figure>
+        <p className='hero__underline'>{this.props.underline}</p>
       </div>
     );
   }

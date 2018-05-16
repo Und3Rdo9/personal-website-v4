@@ -10,7 +10,6 @@ const Navigation = () => (
           activeClassName='navigation__link--active'
           exact={true}
           to='/'
-
         >
           Home
         </NavLink>

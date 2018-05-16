@@ -7,13 +7,18 @@ $theme-color-quarternary: #F5F5F5;
 $white:                   white;
 $black:                   $theme-color-tertiary;
 
+// LAYOUT
+$header-height: 75px;
+$container-padding: 16px;
+$container-max-width: 1200px;
+
 // FONTS
 $font-path:               'assets/fonts';
 $font-name:               'EuclidCircularBTrial';
 $theme-font-primary:      'Font';
 
-$fw-regular:  400;
 $fw-light:    300;
+$fw-regular:  400;
 $fw-medium:   500;
 $fw-semibold: 600;
 $fw-bold:     700;
@@ -26,6 +31,13 @@ $fw-bold:     700;
   url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.ttf')
   format('truetype');
 }
+// BEGIN Light
+@font-face {
+  @include fontdef-woff($font-path, $font-name, 'Light');
+  font-family: $theme-font-primary;
+  font-weight: $fw-light;
+  font-style: normal;
+}
 
 // BEGIN Regular
 @font-face {
@@ -35,15 +47,10 @@ $fw-bold:     700;
   font-style: normal;
 }
 
-// BEGIN Regular
+// BEGIN Bold
 @font-face {
   @include fontdef-woff($font-path, $font-name, 'Bold');
   font-family: $theme-font-primary;
   font-weight: $fw-bold;
   font-style: normal;
-}
-
-* {
-  font-family: $theme-font-primary;
-  font-weight: $fw-regular;
 }

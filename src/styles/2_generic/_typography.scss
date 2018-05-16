@@ -10,11 +10,16 @@ $sgl-scale-factor: 1.5;
 @import "sassy-gridlover/sassy-gridlover/_sassy-gridlover.scss";
 
 html {
-    @include sgl-html();
+  @include sgl-html();
+}
+
+* {
+  font-family: $theme-font-primary;
+  font-weight: $fw-regular;
 }
 
 body {
-    @include sgl-body("rem");
+  @include sgl-body("rem");
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,20 +29,20 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    @include sgl-heading(3, "rem");
+  @include sgl-heading(3, "rem");
 }
 
 h2 {
-    @include sgl-heading(2, "rem");
+  @include sgl-heading(2, "rem");
 }
 
 h3 {
-    @include sgl-heading(1, "rem");
+  @include sgl-heading(1, "rem");
 
 }
 
 h4, h5, h6 {
-    @include sgl-heading(0);
+  @include sgl-heading(0);
 }
 
 p,
@@ -46,5 +51,5 @@ ol,
 pre,
 table,
 blockquote {
-    @include sgl-margins();
+  @include sgl-margins();
 }
