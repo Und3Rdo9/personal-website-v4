@@ -2,7 +2,7 @@
 
 exports[`<App /> matches the snapshot 1`] = `
 <React.Fragment>
-  <Header />
+  <clickOutside(Header) />
   <Routes />
   <Footer />
 </React.Fragment>

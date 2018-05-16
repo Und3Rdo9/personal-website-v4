@@ -3,16 +3,13 @@ import { Route, Switch } from "react-router-dom";
 
 import HomePage from './../layouts/HomePage';
 import PostPage from './../blog/PostPage';
-
-const Blog = () => (
-  <div>There should be a blog overview here</div>
-);
+import BlogOverview from './../blog/BlogOverview';
 
 const Routes = () => (
   <main>
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route exact path="/frontend-blog" component={Blog} />
+      <Route exact path="/frontend-blog" component={BlogOverview} />
       <Route exact path="/frontend-blog/:slug" component={PostPage} />
     </Switch>
   </main>
