@@ -15,15 +15,6 @@ import Routes from './Routes';
 configure({ adapter : new Adapter() });
 
 describe('<Routes />', () => {
-  it('matches the snapshot', () => {
-    const tree = shallow(
-      <MemoryRouter initialEntries={['/']} initialIndex={0} >
-        <Routes />
-      </MemoryRouter>
-    );
-
-    expect(toJson(tree)).toMatchSnapshot();
-  });
 
   it('renders the HomePage component correctly when visiting / ', () => {
     const router = mount(
