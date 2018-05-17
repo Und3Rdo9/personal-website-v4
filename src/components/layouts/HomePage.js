@@ -1,23 +1,32 @@
 import React, { Component } from 'react';
 import Hero from './../hero/Hero';
-import UspList from './../usp/UspList';
+import UspListContainer from './../usp/UspListContainer';
 import portraitImg from './../../assets/images/portrait-tb.jpeg';
-
+import Section from './../common/Section';
+import Container from './../common/Container';
 
 class HomePage extends Component {
   render() {
     return (
-      <div className='container'>
-        <Hero
-          title='Tim Bakkum'
-          underline='Amsterdam based front&#8209;end&nbsp;developer'
-          imageSrc={portraitImg}
-        />
+      <React.Fragment>
+        <Container>
+          <Hero
+            title='Tim Bakkum'
+            underline='Amsterdam based front&#8209;end&nbsp;developer'
+            imageSrc={portraitImg}
+          />
+        </Container>
 
-        <UspList
+        <Section type='light'>
+          <h2 style={{textAlign:'center'}}>What I'm About</h2>
+          <Container>
+            <UspListContainer />
+          </Container>
+        </Section>
 
-        />
-      </div>
+        
+      </React.Fragment>
+
     );
   }
 }

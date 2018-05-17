@@ -1,0 +1,9 @@
+.section {
+  margin-bottom: 3rem;
+
+  &--light {
+    background-color: $theme-color-quarternary;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
