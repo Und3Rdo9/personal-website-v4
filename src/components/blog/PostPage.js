@@ -2,6 +2,7 @@ import React from 'react';
 import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
 import ReactMarkdown from 'react-markdown';
+import SectionLoader from './../common/SectionLoader';
 
 const GET_POST = gql`
 query post($slug: String!) {
@@ -22,7 +23,7 @@ const PostPage = ( {match} ) => (
   <div>
     <Query query={GET_POST} variables={{ slug: match.params.slug }}>
       {( { loading, error, data } ) => {
-        if (loading) return <div>Loading...</div>;
+        if (loading) return <SectionLoader isActive={true} />;
         if (error) return <div>Error :(</div>;
           if (data.Post) {
             return (
