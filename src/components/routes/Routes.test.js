@@ -27,9 +27,11 @@ describe('<Routes />', () => {
 
   it('renders the HomePage component correctly when visiting / ', () => {
     const router = mount(
-      <MemoryRouter initialEntries={['/']} initialIndex={0} >
-        <Routes />
-      </MemoryRouter>
+      <MockedProvider mocks={[]}>
+        <MemoryRouter initialEntries={['/']} initialIndex={0} >
+          <Routes />
+        </MemoryRouter>
+      </MockedProvider>
     );
 
     expect(router.find(HomePage).length).toBe(1);
