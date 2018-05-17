@@ -1,0 +1,14 @@
+$primary-color: $theme-color-dark; // override loader color
+
+@import 'loaders.css/src/animations/ball-grid-pulse';
+
+.loader-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @include sgl-margins;
+
+  &--section {
+    margin-bottom: 3rem;
+  }
+}
