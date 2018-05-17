@@ -27,7 +27,6 @@ const PostFeedContainer = () => (
       if (loading) return <SectionLoader isActive={true} />;
       if (error) return <div>Error :( {error}</div>;
         if (data.allPosts.length) {
-          console.log(data.allPosts);
           return <PostFeed postsData={data.allPosts} />
         }
         else {
