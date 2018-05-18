@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostFeedItem /> renders correctly  1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PostFeedItem
+    post={
+        Object {
+            "coverImage": Object {
+              "url": "http://timbakkum.net",
+            },
+            "dateAndTime": "21380921389",
+            "slug": "test-slug",
+            "summary": "testSummary",
+            "title": "testTitle",
+          }
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <img
+          alt="testTitle"
+          className="post-feed__item-cover"
+          src="http://timbakkum.net"
+/>,
+        <h3
+          className="post-feed__item-title"
+>
+          testTitle
+</h3>,
+        <p
+          className="post-feed__item-summary"
+>
+          testSummary
+</p>,
+        <Link
+          className="post-feed__item-cta button button--primary"
+          replace={false}
+          to="/frontend-blog/test-slug"
+>
+          Read more
+</Link>,
+      ],
+      "className": "post-feed__item",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "testTitle",
+          "className": "post-feed__item-cover",
+          "src": "http://timbakkum.net",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "testTitle",
+          "className": "post-feed__item-title",
+        },
+        "ref": null,
+        "rendered": "testTitle",
+        "type": "h3",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "testSummary",
+          "className": "post-feed__item-summary",
+        },
+        "ref": null,
+        "rendered": "testSummary",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Read more",
+          "className": "post-feed__item-cta button button--primary",
+          "replace": false,
+          "to": "/frontend-blog/test-slug",
+        },
+        "ref": null,
+        "rendered": "Read more",
+        "type": [Function],
+      },
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <img
+            alt="testTitle"
+            className="post-feed__item-cover"
+            src="http://timbakkum.net"
+/>,
+          <h3
+            className="post-feed__item-title"
+>
+            testTitle
+</h3>,
+          <p
+            className="post-feed__item-summary"
+>
+            testSummary
+</p>,
+          <Link
+            className="post-feed__item-cta button button--primary"
+            replace={false}
+            to="/frontend-blog/test-slug"
+>
+            Read more
+</Link>,
+        ],
+        "className": "post-feed__item",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "testTitle",
+            "className": "post-feed__item-cover",
+            "src": "http://timbakkum.net",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "testTitle",
+            "className": "post-feed__item-title",
+          },
+          "ref": null,
+          "rendered": "testTitle",
+          "type": "h3",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "testSummary",
+            "className": "post-feed__item-summary",
+          },
+          "ref": null,
+          "rendered": "testSummary",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Read more",
+            "className": "post-feed__item-cta button button--primary",
+            "replace": false,
+            "to": "/frontend-blog/test-slug",
+          },
+          "ref": null,
+          "rendered": "Read more",
+          "type": [Function],
+        },
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

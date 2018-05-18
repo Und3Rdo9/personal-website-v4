@@ -13,7 +13,7 @@ const PostFeedItem = ({ post }) => {
       />
       <h3 className='post-feed__item-title'>{title}</h3>
       <p className='post-feed__item-summary'>{summary}</p>
-      <Link to={`/frontend-blog/${slug}`} className='button button--primary'>Read more</Link>
+      <Link to={`/frontend-blog/${slug}`} className='post-feed__item-cta button button--primary'>Read more</Link>
     </article>
   )
 }

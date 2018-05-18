@@ -1,0 +1,204 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostFeed /> renders correctly  1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <PostFeed
+    postsData={
+        Array [
+            Object {
+              "coverImage": Object {
+                "url": "http://timbakkum.net",
+              },
+              "dateAndTime": "21380921389",
+              "slug": "test-slug",
+              "summary": "testSummary",
+              "title": "testTitle",
+            },
+            Object {
+              "coverImage": Object {
+                "url": "http://timbakkum2.net",
+              },
+              "dateAndTime": "29991002001",
+              "slug": "test-slug2",
+              "summary": "testSummary2",
+              "title": "testTitle2",
+            },
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <PostFeedItem
+          post={
+                    Object {
+                              "coverImage": Object {
+                                "url": "http://timbakkum.net",
+                              },
+                              "dateAndTime": "21380921389",
+                              "slug": "test-slug",
+                              "summary": "testSummary",
+                              "title": "testTitle",
+                            }
+          }
+/>,
+        <PostFeedItem
+          post={
+                    Object {
+                              "coverImage": Object {
+                                "url": "http://timbakkum2.net",
+                              },
+                              "dateAndTime": "29991002001",
+                              "slug": "test-slug2",
+                              "summary": "testSummary2",
+                              "title": "testTitle2",
+                            }
+          }
+/>,
+      ],
+      "className": "post-feed",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "test-slug",
+        "nodeType": "function",
+        "props": Object {
+          "post": Object {
+            "coverImage": Object {
+              "url": "http://timbakkum.net",
+            },
+            "dateAndTime": "21380921389",
+            "slug": "test-slug",
+            "summary": "testSummary",
+            "title": "testTitle",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "test-slug2",
+        "nodeType": "function",
+        "props": Object {
+          "post": Object {
+            "coverImage": Object {
+              "url": "http://timbakkum2.net",
+            },
+            "dateAndTime": "29991002001",
+            "slug": "test-slug2",
+            "summary": "testSummary2",
+            "title": "testTitle2",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <PostFeedItem
+            post={
+                        Object {
+                                    "coverImage": Object {
+                                      "url": "http://timbakkum.net",
+                                    },
+                                    "dateAndTime": "21380921389",
+                                    "slug": "test-slug",
+                                    "summary": "testSummary",
+                                    "title": "testTitle",
+                                  }
+            }
+/>,
+          <PostFeedItem
+            post={
+                        Object {
+                                    "coverImage": Object {
+                                      "url": "http://timbakkum2.net",
+                                    },
+                                    "dateAndTime": "29991002001",
+                                    "slug": "test-slug2",
+                                    "summary": "testSummary2",
+                                    "title": "testTitle2",
+                                  }
+            }
+/>,
+        ],
+        "className": "post-feed",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "test-slug",
+          "nodeType": "function",
+          "props": Object {
+            "post": Object {
+              "coverImage": Object {
+                "url": "http://timbakkum.net",
+              },
+              "dateAndTime": "21380921389",
+              "slug": "test-slug",
+              "summary": "testSummary",
+              "title": "testTitle",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "test-slug2",
+          "nodeType": "function",
+          "props": Object {
+            "post": Object {
+              "coverImage": Object {
+                "url": "http://timbakkum2.net",
+              },
+              "dateAndTime": "29991002001",
+              "slug": "test-slug2",
+              "summary": "testSummary2",
+              "title": "testTitle2",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
