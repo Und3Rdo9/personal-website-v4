@@ -24,20 +24,20 @@ const UspListContainer = () => (
   <Query query={GET_ALL_USPS}>
     {( { loading, error, data } ) => {
       if (loading) return <SectionLoader isActive={true} />;
-      if (error) return <div>Error :( {error}</div>;
-        if (data.allUSPs.length) {
-          return <UspList uspData={data.allUSPs} />
-        }
-        else {
-          return (
-            <article>
-              <p>Sorry, this post has not been found.</p>
-            </article>
-          )
-        }
+      if (error) return <div>Error :(</div>;
+      if (data.allUSPs.length) {
+        return <UspList uspData={data.allUSPs} />
+      }
+      else {
+        return (
+          <article>
+            <p>Sorry, this post has not been found.</p>
+          </article>
+        )
+      }
 
-      }}
-    </Query>
-  )
+    }}
+  </Query>
+)
 
-  export default UspListContainer;
+export default UspListContainer;

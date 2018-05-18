@@ -25,7 +25,7 @@ const PostFeedContainer = () => (
   <Query query={GET_POSTS}>
     {( { loading, error, data } ) => {
       if (loading) return <SectionLoader isActive={true} />;
-      if (error) return <div>Error :( {error}</div>;
+      if (error) return <div>Error :( </div>;
       if (data.allPosts.length) {
         return <PostFeed postsData={data.allPosts} />
       }
