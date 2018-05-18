@@ -26,19 +26,18 @@ const PostFeedContainer = () => (
     {( { loading, error, data } ) => {
       if (loading) return <SectionLoader isActive={true} />;
       if (error) return <div>Error :( {error}</div>;
-        if (data.allPosts.length) {
-          return <PostFeed postsData={data.allPosts} />
-        }
-        else {
-          return (
-            <article>
-              <p>Sorry, this content has not been found.</p>
-            </article>
-          )
-        }
+      if (data.allPosts.length) {
+        return <PostFeed postsData={data.allPosts} />
+      }
+      else {
+        return (
+          <article>
+            <p>Sorry, this content has not been found.</p>
+          </article>
+        )
+      }
+    }}
+  </Query>
+);
 
-      }}
-    </Query>
-  )
-
-  export default PostFeedContainer;
+export default PostFeedContainer;

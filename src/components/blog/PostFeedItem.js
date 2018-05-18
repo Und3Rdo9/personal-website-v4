@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 const PostFeedItem = ({ post }) => {
@@ -16,5 +17,17 @@ const PostFeedItem = ({ post }) => {
     </article>
   )
 }
+
+PostFeedItem.propTypes = {
+  post: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    summary: PropTypes.string.isRequired,
+    slug: PropTypes.string.isRequired,
+    coverImage: PropTypes.shape({
+      url: PropTypes.string.isRequired
+    }).isRequired,
+    dateAndTime: PropTypes.string.isRequired
+  }).isRequired
+};
 
 export default PostFeedItem;
