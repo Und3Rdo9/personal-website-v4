@@ -30,9 +30,11 @@ describe('<Routes />', () => {
 
   it('renders the matched route component correctly', () => {
     const router = mount(
-      <MemoryRouter initialEntries={['/frontend-blog']} initialIndex={0} >
-        <Routes />
-      </MemoryRouter>
+      <MockedProvider mocks={[]}>
+        <MemoryRouter initialEntries={['/frontend-blog']} initialIndex={0} >
+          <Routes />
+        </MemoryRouter>
+      </MockedProvider>
     );
 
     expect(router.find(BlogOverview).length).toBe(1);

@@ -44,6 +44,7 @@ export class AllPostsFeedContainer extends Component { // eslint-disable-line re
   }
 
   onLoadMore(fetchMore, data) {
+    // toggle state to disable the load more button
     this.toggleLoadMore();
 
     fetchMore({
@@ -52,6 +53,7 @@ export class AllPostsFeedContainer extends Component { // eslint-disable-line re
         skip: data.allPosts.length
       },
       updateQuery: (prev, { fetchMoreResult }) => {
+        // toggle state to reenable the load more button
         this.toggleLoadMore();
         // return previous query result if nothing more's fetched
         if (!fetchMoreResult) return prev;
