@@ -4,6 +4,7 @@ import UspListContainer from './../usp/UspListContainer';
 import PostFeedContainer from './../blog/PostFeedContainer';
 import portraitImg from './../../assets/images/portrait-tb.jpeg';
 import Section from './../common/Section';
+import SectionTitle from './../common/SectionTitle';
 import Container from './../common/Container';
 
 class HomePage extends Component {
@@ -19,14 +20,14 @@ class HomePage extends Component {
         </Container>
 
         <Section type='light'>
-          <h2 style={{textAlign:'center'}}>What I'm About</h2>
+          <SectionTitle title='What I&lsquo;m About' />
           <Container>
             <UspListContainer />
           </Container>
         </Section>
 
         <Container>
-          <h2 style={{textAlign:'center'}}>Latest from my front&#8209;end blog</h2>
+          <SectionTitle title='Latest from my front&#8209;end blog'/>
           <PostFeedContainer />
         </Container>
       </React.Fragment>
