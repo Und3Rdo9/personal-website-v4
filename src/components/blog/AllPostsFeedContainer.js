@@ -7,7 +7,7 @@ import { POSTS_PER_PAGE } from './../../config';
 
 const GET_ALL_POSTS = gql`
 query getAllPosts($skip: Int!, $first: Int!) {
-  allPosts(skip: $skip, first: $first) {
+  allPosts(orderBy: dateAndTime_DESC, skip: $skip, first: $first) {
     title
     summary
     slug

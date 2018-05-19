@@ -6,7 +6,7 @@ import PostFeed from './PostFeed';
 
 const GET_POSTS = gql`
 query {
-  allPosts(first: 3) {
+  allPosts(orderBy: dateAndTime_DESC, first: 3) {
     title
     summary
     slug
