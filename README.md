@@ -5,6 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - add Apollo React component testing
 - add missing tests (code coverage)
 - add integration testing (cypress.io ?)
+- improve accessibility
 - add SSR or static site generation
 - add page transition animations
 - add projects content type and views
