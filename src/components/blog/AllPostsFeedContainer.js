@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
-import ReactMarkdown from 'react-markdown';
 import SectionLoader from './../common/SectionLoader';
 import PostFeed from './PostFeed';
 import { POSTS_PER_PAGE } from './../../config';

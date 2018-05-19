@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Loader from 'react-loaders';
 
 const SectionLoader = ({ isActive }) => (
@@ -6,5 +7,9 @@ const SectionLoader = ({ isActive }) => (
     <Loader type="ball-grid-pulse" active={isActive} />
   </div>
 );
+
+SectionLoader.propTypes = {
+  isActive: PropTypes.bool.isRequired
+};
 
 export default SectionLoader;
