@@ -11,9 +11,12 @@ const PostFeedItem = ({ post }) => {
         src={coverImage.url}
         alt={title}
       />
-      <h3 className='post-feed__item-title'>{title}</h3>
-      <p className='post-feed__item-summary'>{summary}</p>
-      <Link to={`/frontend-blog/${slug}`} className='post-feed__item-cta button button--primary'>Read more</Link>
+      <div className="post-feed__item-content">
+        <h3 className='post-feed__item-title'>{title}</h3>
+        <p className='post-feed__item-summary'>{summary}</p>
+        <Link to={`/frontend-blog/${slug}`} className='post-feed__item-cta' aria-label={title}>Read more</Link>
+      </div>
+
     </article>
   )
 }

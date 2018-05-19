@@ -1,0 +1,29 @@
+$text-link-underline-color: $theme-color-dark;
+
+.text-link {
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+  line-height: inherit;
+  font-size: inherit;
+  color: #6666ff;
+
+  &:after {
+    content: "";
+    transition: 0.5s width ease;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    position: absolute;
+    bottom: -0.25em;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: $text-link-underline-color;
+  }
+
+  &:hover, &:focus, &:active {
+    &:after {
+      width: 100%;
+    }
+  }
+}

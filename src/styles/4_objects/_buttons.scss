@@ -1,0 +1,84 @@
+$button-lh: 1.5rem;
+$button-fz: (14/18) * 1rem;
+$button-height: 3rem;
+$button-vertical-padding: ($button-height - $button-lh) / 2;
+$button-padding-horizontal: 1rem;
+$button-fw: $fw-bold;
+$button-tt: uppercase;
+$button-themes: (
+  primary: (
+    background-color: $theme-color-secondary,
+    color: $theme-color-tertiary
+  ),
+  secondary: (
+    background-color: $theme-color-tertiary,
+    color: $theme-color-secondary
+  )
+);
+
+%reset-button {
+  // source: https://gist.github.com/MoOx/9137295
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  text-decoration: none;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+
+  /* Remove excess padding and border in Firefox 4+ */
+  &::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+}
+
+
+
+.button {
+  @extend %reset-button;
+
+  font-size: $button-fz;
+  padding: $button-vertical-padding $button-padding-horizontal;
+  line-height: $button-lh;
+  font-weight: $button-fw;
+  text-transform: $button-tt;
+  background: $theme-color-quarternary;
+  transition: background-color .3s ease;
+
+  &--primary {
+    // turn this duplicated code into reusable function/loop
+    background-color: map-get(map-get($button-themes, primary), background-color);
+    color: map-get(map-get($button-themes, primary), color);
+
+    &:hover, &:focus, &:active {
+      background-color: darken(map-get(map-get($button-themes, primary), background-color), 5%);
+    }
+  }
+
+  &--secondary {
+    // turn this duplicated code into reusable function/loop
+    background-color: map-get(map-get($button-themes, secondary), background-color);
+    color: map-get(map-get($button-themes, secondary), color);
+
+    &:hover, &:focus, &:active {
+      background-color: darken(map-get(map-get($button-themes, secondary), background-color), 5%);
+    }
+  }
+}

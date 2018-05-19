@@ -1,0 +1,19 @@
+$link-color: #3333FF;
+$active-link-color: #CC3300;
+$visited-link-color: #804180;
+
+// color values taken from: https://www.w3.org/TR/2008/NOTE-WCAG20-TECHS-20081211/working-examples/G183/link-contrast.html
+
+a {
+  color: $link-color;
+  transition: color .3s ease;\
+
+  &:visited {
+    color: $visited-link-color;
+  }
+
+  &:hover, &:focus, &:active {
+    color: $active-link-color;
+  }
+
+}
