@@ -27,8 +27,10 @@ class HomePage extends Component {
         </Section>
 
         <Container>
-          <SectionTitle title='Latest from my front&#8209;end blog'/>
-          <LatestPostsFeedContainer />
+          <Section>
+            <SectionTitle title='Latest from my front&#8209;end blog'/>
+            <LatestPostsFeedContainer />
+          </Section>
         </Container>
       </React.Fragment>
     );

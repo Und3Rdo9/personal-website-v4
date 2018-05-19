@@ -7,7 +7,7 @@ const Container = ({ children }) => (
   </div>
 );
 
-Section.propTypes = {
+Container.propTypes = {
   children: PropTypes.node
 };
 
