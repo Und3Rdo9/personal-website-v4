@@ -16,6 +16,7 @@ class Header extends Component {
     };
 
     this.toggleNavigation = this.toggleNavigation.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
   toggleNavigation() {
