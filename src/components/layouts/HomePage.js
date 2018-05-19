@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Hero from './../hero/Hero';
 import UspListContainer from './../usp/UspListContainer';
-import PostFeedContainer from './../blog/PostFeedContainer';
+import LatestPostsFeedContainer from './../blog/LatestPostsFeedContainer';
 import portraitImg from './../../assets/images/portrait-tb.jpeg';
 import Section from './../common/Section';
 import SectionTitle from './../common/SectionTitle';
@@ -20,7 +20,7 @@ class HomePage extends Component {
         </Container>
 
         <Section type='light'>
-          <SectionTitle title='What I&lsquo;m About' />
+          <SectionTitle title='What I&rsquo;m About' />
           <Container>
             <UspListContainer />
           </Container>
@@ -28,10 +28,9 @@ class HomePage extends Component {
 
         <Container>
           <SectionTitle title='Latest from my front&#8209;end blog'/>
-          <PostFeedContainer />
+          <LatestPostsFeedContainer />
         </Container>
       </React.Fragment>
-
     );
   }
 }

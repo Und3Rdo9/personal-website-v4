@@ -6,7 +6,7 @@ import PostFeed from './PostFeed';
 
 const GET_POSTS = gql`
 query {
-  allPosts {
+  allPosts(first: 3) {
     title
     summary
     slug
@@ -19,9 +19,9 @@ query {
 `;
 
 /**
-* PostFeedContainer
+* LatestPostsFeedContainer
 */
-const PostFeedContainer = () => (
+const LatestPostsFeedContainer = () => (
   <Query query={GET_POSTS}>
     {( { loading, error, data } ) => {
       if (loading) return <SectionLoader isActive={true} />;
@@ -40,4 +40,4 @@ const PostFeedContainer = () => (
   </Query>
 );
 
-export default PostFeedContainer;
+export default LatestPostsFeedContainer;

@@ -59,8 +59,14 @@ $button-themes: (
   line-height: $button-lh;
   font-weight: $button-fw;
   text-transform: $button-tt;
-  background: $theme-color-quarternary;
+  background: grey;
   transition: background-color .3s ease;
+
+  &[disabled], &:disabled {
+    background: $theme-color-quarternary;
+    color: grey;
+    cursor: not-allowed;
+  }
 
   &--primary {
     // turn this duplicated code into reusable function/loop

@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<PostFeedContainer /> matches snapshot  1`] = `
+exports[`<LatestsPostsFeedContainer /> matches snapshot  1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <PostFeedContainer />,
+  Symbol(enzyme.__unrendered__): <LatestPostsFeedContainer />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -30,7 +30,19 @@ ShallowWrapper {
               "selections": Array [
                 Object {
                   "alias": undefined,
-                  "arguments": Array [],
+                  "arguments": Array [
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
+                        "value": "first",
+                      },
+                      "value": Object {
+                        "kind": "IntValue",
+                        "value": "3",
+                      },
+                    },
+                  ],
                   "directives": Array [],
                   "kind": "Field",
                   "name": Object {
@@ -120,7 +132,7 @@ ShallowWrapper {
         ],
         "kind": "Document",
         "loc": Object {
-          "end": 108,
+          "end": 118,
           "start": 0,
         },
       },
@@ -148,7 +160,19 @@ ShallowWrapper {
                 "selections": Array [
                   Object {
                     "alias": undefined,
-                    "arguments": Array [],
+                    "arguments": Array [
+                      Object {
+                        "kind": "Argument",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "first",
+                        },
+                        "value": Object {
+                          "kind": "IntValue",
+                          "value": "3",
+                        },
+                      },
+                    ],
                     "directives": Array [],
                     "kind": "Field",
                     "name": Object {
@@ -238,7 +262,7 @@ ShallowWrapper {
           ],
           "kind": "Document",
           "loc": Object {
-            "end": 108,
+            "end": 118,
             "start": 0,
           },
         },

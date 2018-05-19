@@ -35,23 +35,28 @@ ShallowWrapper {
           className="post-feed__item-cover"
           src="http://timbakkum.net"
 />,
-        <h3
-          className="post-feed__item-title"
+        <div
+          className="post-feed__item-content"
 >
-          testTitle
-</h3>,
-        <p
-          className="post-feed__item-summary"
->
-          testSummary
-</p>,
-        <Link
-          className="post-feed__item-cta button button--primary"
-          replace={false}
-          to="/frontend-blog/test-slug"
->
-          Read more
-</Link>,
+          <h3
+                    className="post-feed__item-title"
+          >
+                    testTitle
+          </h3>
+          <p
+                    className="post-feed__item-summary"
+          >
+                    testSummary
+          </p>
+          <Link
+                    aria-label="testTitle"
+                    className="post-feed__item-cta"
+                    replace={false}
+                    to="/frontend-blog/test-slug"
+          >
+                    Read more
+          </Link>
+</div>,
       ],
       "className": "post-feed__item",
     },
@@ -75,38 +80,71 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": "testTitle",
-          "className": "post-feed__item-title",
+          "children": Array [
+            <h3
+              className="post-feed__item-title"
+>
+              testTitle
+</h3>,
+            <p
+              className="post-feed__item-summary"
+>
+              testSummary
+</p>,
+            <Link
+              aria-label="testTitle"
+              className="post-feed__item-cta"
+              replace={false}
+              to="/frontend-blog/test-slug"
+>
+              Read more
+</Link>,
+          ],
+          "className": "post-feed__item-content",
         },
         "ref": null,
-        "rendered": "testTitle",
-        "type": "h3",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": "testSummary",
-          "className": "post-feed__item-summary",
-        },
-        "ref": null,
-        "rendered": "testSummary",
-        "type": "p",
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": "Read more",
-          "className": "post-feed__item-cta button button--primary",
-          "replace": false,
-          "to": "/frontend-blog/test-slug",
-        },
-        "ref": null,
-        "rendered": "Read more",
-        "type": [Function],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "testTitle",
+              "className": "post-feed__item-title",
+            },
+            "ref": null,
+            "rendered": "testTitle",
+            "type": "h3",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "testSummary",
+              "className": "post-feed__item-summary",
+            },
+            "ref": null,
+            "rendered": "testSummary",
+            "type": "p",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "aria-label": "testTitle",
+              "children": "Read more",
+              "className": "post-feed__item-cta",
+              "replace": false,
+              "to": "/frontend-blog/test-slug",
+            },
+            "ref": null,
+            "rendered": "Read more",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
       },
     ],
     "type": "article",
@@ -123,23 +161,28 @@ ShallowWrapper {
             className="post-feed__item-cover"
             src="http://timbakkum.net"
 />,
-          <h3
-            className="post-feed__item-title"
+          <div
+            className="post-feed__item-content"
 >
-            testTitle
-</h3>,
-          <p
-            className="post-feed__item-summary"
->
-            testSummary
-</p>,
-          <Link
-            className="post-feed__item-cta button button--primary"
-            replace={false}
-            to="/frontend-blog/test-slug"
->
-            Read more
-</Link>,
+            <h3
+                        className="post-feed__item-title"
+            >
+                        testTitle
+            </h3>
+            <p
+                        className="post-feed__item-summary"
+            >
+                        testSummary
+            </p>
+            <Link
+                        aria-label="testTitle"
+                        className="post-feed__item-cta"
+                        replace={false}
+                        to="/frontend-blog/test-slug"
+            >
+                        Read more
+            </Link>
+</div>,
         ],
         "className": "post-feed__item",
       },
@@ -163,38 +206,71 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": "testTitle",
-            "className": "post-feed__item-title",
+            "children": Array [
+              <h3
+                className="post-feed__item-title"
+>
+                testTitle
+</h3>,
+              <p
+                className="post-feed__item-summary"
+>
+                testSummary
+</p>,
+              <Link
+                aria-label="testTitle"
+                className="post-feed__item-cta"
+                replace={false}
+                to="/frontend-blog/test-slug"
+>
+                Read more
+</Link>,
+            ],
+            "className": "post-feed__item-content",
           },
           "ref": null,
-          "rendered": "testTitle",
-          "type": "h3",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": "testSummary",
-            "className": "post-feed__item-summary",
-          },
-          "ref": null,
-          "rendered": "testSummary",
-          "type": "p",
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": "Read more",
-            "className": "post-feed__item-cta button button--primary",
-            "replace": false,
-            "to": "/frontend-blog/test-slug",
-          },
-          "ref": null,
-          "rendered": "Read more",
-          "type": [Function],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "testTitle",
+                "className": "post-feed__item-title",
+              },
+              "ref": null,
+              "rendered": "testTitle",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "testSummary",
+                "className": "post-feed__item-summary",
+              },
+              "ref": null,
+              "rendered": "testSummary",
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "aria-label": "testTitle",
+                "children": "Read more",
+                "className": "post-feed__item-cta",
+                "replace": false,
+                "to": "/frontend-blog/test-slug",
+              },
+              "ref": null,
+              "rendered": "Read more",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
         },
       ],
       "type": "article",

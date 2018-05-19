@@ -1,7 +1,16 @@
 import React from "react";
+import Container from './../common/Container';
+import Section from './../common/Section';
+import SectionTitle from './../common/SectionTitle';
+import AllPostsFeedContainer from './AllPostsFeedContainer';
 
 const BlogOverview = () => (
-  <div>There should be a blog overview here</div>
+  <Container>
+    <Section>
+      <SectionTitle title='Blogartikelen' />
+      <AllPostsFeedContainer />
+    </Section>
+  </Container>
 );
 
 export default BlogOverview;
