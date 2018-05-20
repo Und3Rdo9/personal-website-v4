@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { gql } from 'apollo-boost';
 import { Query } from 'react-apollo';
-import ReactMarkdown from 'react-markdown';
 import SectionLoader from './../common/SectionLoader';
+import PostDetail from './PostDetail';
 
 const GET_POST = gql`
 query post($slug: String!) {
@@ -12,28 +13,30 @@ query post($slug: String!) {
       name
     }
     dateAndTime
-    summary
     tags
     content
+    coverImage {
+      url
+    }
   }
 }
 `;
 
-const PostPage = ( {match} ) => (
+const PostPageContainer = ( {match} ) => (
   <Query query={GET_POST} variables={{ slug: match.params.slug }}>
     {( { loading, error, data } ) => {
       if (loading) return <SectionLoader isActive={true} />;
       if (error) return <div>Error :(</div>;
         if (data.Post) {
           return (
-            <article className="container">
-              <h1>{data.Post.title}</h1>
-              <p>{`by ${data.Post.authors[0].name}`}</p>
-              <p>{data.Post.postsummary}</p>
-              <main>
-                <ReactMarkdown source={data.Post.content} />
-              </main>
-            </article>
+            <PostDetail
+              title={data.Post.title}
+              authorName={data.Post.authors[0].name}
+              coverImage={data.Post.coverImage.url}
+              tags={data.Post.tags}
+              content={data.Post.content}
+              dateAndTime={data.Post.dateAndTime}
+            />
           )
         }
         else {
@@ -48,4 +51,8 @@ const PostPage = ( {match} ) => (
   </Query>
 );
 
-export default PostPage;
+PostPageContainer.propTypes = {
+  match: PropTypes.object.isRequired
+};
+
+export default PostPageContainer;

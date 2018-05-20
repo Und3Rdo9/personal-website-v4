@@ -1,0 +1,91 @@
+.post-detail {
+  margin-top: -75px;
+
+  &__figure {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    @supports(object-fit: cover) {
+      height: 200px;
+
+      @include tablet {
+        height: 300px;
+      }
+
+      @include desktop {
+        height: 400px;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    @supports(object-fit: cover) {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__meta {
+    position: absolute;
+    right: 75px;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__pubdate,
+  &__author {
+    // to do : refactor into label style
+    font-size: (14/18) * 1rem;
+    line-height: 32px;
+    font-weight: $fw-bold;
+    text-transform: uppercase;
+    padding: 0 10px;
+    display: inline-block;
+  }
+
+  &__pubdate {
+    margin-right: 10px;
+    background: $theme-color-secondary;
+    color: $black;
+  }
+
+  &__author {
+    background-color: $theme-color-tertiary;
+    color: $theme-color-primary;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__content {
+    max-width: 680px;
+    margin: 0 auto;
+    color: $black;
+    font-weight: 300;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      @include sgl-margins();
+    }
+
+    em {
+      // introduction texts
+      display: block;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: $fw-regular;
+      margin-bottom: 1.5rem;
+      color: $theme-color-tertiary;
+    }
+  }
+}

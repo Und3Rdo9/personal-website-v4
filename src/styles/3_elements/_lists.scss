@@ -1,0 +1,48 @@
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+
+  li {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    position: relative;
+    margin-bottom: 0.75rem;
+    padding-left: 20px;
+
+    > ul {
+      margin-top: 0.75rem;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+    }
+
+    &:before {
+      width: 8px;
+      height: 8px;
+      left: 0;
+      top: 8px;
+      border-radius: 50%;
+      background-color: $theme-color-primary;
+    }
+
+    li {
+
+      &:before {
+        border: 1px solid $theme-color-primary;
+        background-color: transparent;
+      }
+
+      li {
+        &:before {
+          border-radius: 0;
+          background-color: $theme-color-primary;
+        }
+      }
+    }
+  }
+}

@@ -11,14 +11,13 @@ $sgl-scale-factor: 1.5;
 
 html {
   @include sgl-html();
-}
-
-* {
   font-family: $theme-font-primary;
   font-weight: $fw-regular;
 }
 
 body {
+  font-family: $theme-font-primary;
+  font-weight: $fw-regular;
   @include sgl-body("rem");
 }
 

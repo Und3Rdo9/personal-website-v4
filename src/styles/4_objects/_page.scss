@@ -1,0 +1,13 @@
+.page {
+
+  &__title {
+
+  }
+
+  &__content {
+    @include tablet {
+      columns: 2;
+      column-gap: 1.5rem;
+    }
+  }
+}
