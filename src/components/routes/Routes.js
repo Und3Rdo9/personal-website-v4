@@ -7,7 +7,7 @@ import ContentPageContainer from './../page/ContentPageContainer';
 import BlogOverview from './../blog/BlogOverview';
 
 const Routes = () => (
-  <main>
+  <main className="app__content">
     <Switch>
       <Route exact path='/' component={HomePage} />
       <Route exact path='/frontend-blog' component={BlogOverview} />

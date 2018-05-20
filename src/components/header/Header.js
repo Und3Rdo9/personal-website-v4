@@ -33,7 +33,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header className='header'>
+      <header className='app__header header'>
         <Link
           to='/'
           className='header__logo'
