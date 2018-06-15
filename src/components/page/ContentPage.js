@@ -6,15 +6,21 @@ import Container from './../common/Container';
 
 const ContentPage = ({ title, coverImage, content }) => {
   return (
-    <article className='page'>
+    <article className="page">
       <Container>
-        <h1 className='page__title'>{title}</h1>
-        <section className='page__content'>
+        <h1 className="page__title">{title}</h1>
+        <section className="page__content">
           <ReactMarkdown source={content} />
         </section>
       </Container>
     </article>
   );
+};
+
+ContentPage.propTypes = {
+  title: PropTypes.string.isRequired,
+  coverImage: PropTypes.string,
+  content: PropTypes.string.isRequired
 };
 
 export default ContentPage;
