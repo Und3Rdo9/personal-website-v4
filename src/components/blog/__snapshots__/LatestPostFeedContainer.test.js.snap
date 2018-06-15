@@ -35,6 +35,17 @@ ShallowWrapper {
                       "kind": "Argument",
                       "name": Object {
                         "kind": "Name",
+                        "value": "orderBy",
+                      },
+                      "value": Object {
+                        "kind": "EnumValue",
+                        "value": "dateAndTime_DESC",
+                      },
+                    },
+                    Object {
+                      "kind": "Argument",
+                      "name": Object {
+                        "kind": "Name",
                         "value": "first",
                       },
                       "value": Object {
@@ -132,7 +143,7 @@ ShallowWrapper {
         ],
         "kind": "Document",
         "loc": Object {
-          "end": 118,
+          "end": 145,
           "start": 0,
         },
       },
@@ -161,6 +172,17 @@ ShallowWrapper {
                   Object {
                     "alias": undefined,
                     "arguments": Array [
+                      Object {
+                        "kind": "Argument",
+                        "name": Object {
+                          "kind": "Name",
+                          "value": "orderBy",
+                        },
+                        "value": Object {
+                          "kind": "EnumValue",
+                          "value": "dateAndTime_DESC",
+                        },
+                      },
                       Object {
                         "kind": "Argument",
                         "name": Object {
@@ -262,7 +284,7 @@ ShallowWrapper {
           ],
           "kind": "Document",
           "loc": Object {
-            "end": 118,
+            "end": 145,
             "start": 0,
           },
         },

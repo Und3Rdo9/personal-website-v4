@@ -8,18 +8,17 @@ import { MemoryRouter } from 'react-router';
 
 import HomePage from './../layouts/HomePage';
 import BlogOverview from './../blog/BlogOverview';
-import PostPage from './../blog/PostPage';
+import PostPageContainer from './../blog/PostPageContainer';
 
 import Routes from './Routes';
 
-configure({ adapter : new Adapter() });
+configure({ adapter: new Adapter() });
 
 describe('<Routes />', () => {
-
   it('renders the HomePage component correctly when visiting / ', () => {
     const router = mount(
       <MockedProvider mocks={[]}>
-        <MemoryRouter initialEntries={['/']} initialIndex={0} >
+        <MemoryRouter initialEntries={['/']} initialIndex={0}>
           <Routes />
         </MemoryRouter>
       </MockedProvider>
@@ -31,7 +30,7 @@ describe('<Routes />', () => {
   it('renders the matched route component correctly', () => {
     const router = mount(
       <MockedProvider mocks={[]}>
-        <MemoryRouter initialEntries={['/frontend-blog']} initialIndex={0} >
+        <MemoryRouter initialEntries={['/frontend-blog']} initialIndex={0}>
           <Routes />
         </MemoryRouter>
       </MockedProvider>
@@ -43,12 +42,15 @@ describe('<Routes />', () => {
   it('renders a blog post page component correctly', () => {
     const router = mount(
       <MockedProvider mocks={[]}>
-        <MemoryRouter initialEntries={['/frontend-blog/my-javascript-journey']} initialIndex={0} >
+        <MemoryRouter
+          initialEntries={['/frontend-blog/my-javascript-journey']}
+          initialIndex={0}
+        >
           <Routes />
         </MemoryRouter>
       </MockedProvider>
     );
 
-    expect(router.find(PostPage).length).toBe(1);
+    expect(router.find(PostPageContainer).length).toBe(1);
   });
 });
