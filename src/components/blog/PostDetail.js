@@ -13,7 +13,6 @@ const PostDetail = ({
   dateAndTime,
   content
 }) => {
-  console.log(dateAndTime);
   return (
     <article className="post-detail">
       <figure className="post-detail__figure">
