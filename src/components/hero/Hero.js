@@ -8,7 +8,11 @@ export const Hero = props => (
   <div className="hero">
     <h1 className="hero__title">{props.title}</h1>
     <figure className="hero__figure">
-      <img className="hero__img" src={props.imageSrc} alt="Tim Bakkum" />
+      <img
+        className="hero__img"
+        src={props.imageSrc}
+        alt="Tim Bakkum Portrait"
+      />
     </figure>
     <p className="hero__underline">{props.underline}</p>
   </div>
