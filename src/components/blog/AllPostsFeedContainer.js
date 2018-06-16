@@ -5,26 +5,28 @@ import SectionLoader from './../common/SectionLoader';
 import PostFeed from './PostFeed';
 import { POSTS_PER_PAGE } from './../../config';
 
-const GET_ALL_POSTS = gql`
-query getAllPosts($skip: Int!, $first: Int!) {
-  allPosts(orderBy: dateAndTime_DESC, skip: $skip, first: $first) {
-    title
-    summary
-    slug
-    coverImage {
-      url
+export const GET_ALL_POSTS = gql`
+  query getAllPosts($skip: Int!, $first: Int!) {
+    allPosts(orderBy: dateAndTime_DESC, skip: $skip, first: $first) {
+      title
+      summary
+      slug
+      coverImage {
+        url
+      }
+      dateAndTime
     }
-    dateAndTime
+    _allPostsMeta {
+      count
+    }
   }
-  _allPostsMeta {
-    count
-  }
-}`;
+`;
 
 /**
  * AllPostsFeedContainer
  */
-export class AllPostsFeedContainer extends Component { // eslint-disable-line react/prefer-stateless-function
+export class AllPostsFeedContainer extends Component {
+  // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
 
@@ -68,7 +70,7 @@ export class AllPostsFeedContainer extends Component { // eslint-disable-line re
     if (totalPosts <= currentPosts) return null;
     return (
       <button
-        className='button button--primary'
+        className="button button--primary"
         onClick={onLoadMore}
         disabled={this.state.isLoadingMore}
       >
@@ -79,28 +81,35 @@ export class AllPostsFeedContainer extends Component { // eslint-disable-line re
 
   render() {
     return (
-      <Query query={GET_ALL_POSTS} variables={{skip: 0, first: POSTS_PER_PAGE }}>
-        {( { loading, error, data, fetchMore } ) => {
+      <Query
+        query={GET_ALL_POSTS}
+        variables={{ skip: 0, first: POSTS_PER_PAGE }}
+      >
+        {({ loading, error, data, fetchMore }) => {
           if (loading) return <SectionLoader isActive={true} />;
-          if (error) return <div>Error :(</div>;
-            if (data.allPosts) {
-              return (
-                <React.Fragment>
-                  <PostFeed postsData={data.allPosts} />
-                  {this.renderLoadMoreButton(data._allPostsMeta.count, data.allPosts.length, this.onLoadMore.bind(this, fetchMore, data))}
-                </React.Fragment>
-              )
-            }
-            else {
-              return (
-                <article>
-                  <p>Sorry, this post has not been found.</p>
-                </article>
-              )
-            }
-
-          }}
-        </Query>
+          if (error) {
+            return <div>Error :(</div>;
+          }
+          if (data.allPosts) {
+            return (
+              <React.Fragment>
+                <PostFeed postsData={data.allPosts} />
+                {this.renderLoadMoreButton(
+                  data._allPostsMeta.count,
+                  data.allPosts.length,
+                  this.onLoadMore.bind(this, fetchMore, data)
+                )}
+              </React.Fragment>
+            );
+          } else {
+            return (
+              <article>
+                <p>Sorry, this post has not been found.</p>
+              </article>
+            );
+          }
+        }}
+      </Query>
     );
   }
 }

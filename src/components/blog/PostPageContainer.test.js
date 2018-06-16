@@ -9,18 +9,17 @@ import PostPageContainer, { GET_POST } from './PostPageContainer';
 configure({ adapter: new Adapter() });
 
 describe('<PostPageContainer />', () => {
+  const slug = 'test-slug-that-is-not-in-cache-test';
   const match = {
     params: {
-      slug: 'test-slug-that-is-not-in-cache-test'
+      slug
     }
   };
 
   const postMock = {
     request: {
       query: GET_POST,
-      variables: {
-        slug: 'test-slug-that-is-not-in-cache-test'
-      }
+      variables: { slug }
     },
     result: {
       data: {
@@ -38,6 +37,14 @@ describe('<PostPageContainer />', () => {
     }
   };
 
+  const postErrorMock = {
+    request: {
+      query: GET_POST,
+      variables: { slug }
+    },
+    error: new Error('aw shucks')
+  };
+
   it('should render loading state initially', () => {
     const wrapper = mount(
       <MockedProvider mocks={[]}>
@@ -46,9 +53,11 @@ describe('<PostPageContainer />', () => {
     );
 
     expect(wrapper.find('SectionLoader').length).toBe(1);
+
+    wrapper.unmount();
   });
 
-  it('renders data without error', async () => {
+  it('should render data without error', async () => {
     const wrapper = mount(
       <MockedProvider mocks={[postMock]} addTypename={false}>
         <PostPageContainer match={match} />
@@ -65,6 +74,22 @@ describe('<PostPageContainer />', () => {
       expect(wrapper.find('h1').text()).toEqual(
         'How I leveled up my JS skills: my JavaScript journey'
       );
+    });
+
+    wrapper.unmount();
+  });
+
+  it('should show errors', async () => {
+    const wrapper = mount(
+      <MockedProvider mocks={[postErrorMock]} addTypename={false}>
+        <PostPageContainer match={match} />
+      </MockedProvider>
+    );
+
+    await waitForExpect(() => {
+      wrapper.update();
+
+      expect(wrapper.contains('Error :(')).toEqual(true);
     });
 
     wrapper.unmount();
