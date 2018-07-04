@@ -11,6 +11,7 @@ configure({ adapter: new Adapter() });
 
 describe('<AllPostsFeedContainer />', () => {
   const firstThreePostsMock = {
+    cache: false,
     request: {
       query: GET_ALL_POSTS,
       variables: {
@@ -56,6 +57,7 @@ describe('<AllPostsFeedContainer />', () => {
   };
 
   const additionalPostsMock = {
+    cache: false,
     request: {
       query: GET_ALL_POSTS,
       variables: {
@@ -158,9 +160,8 @@ describe('<AllPostsFeedContainer />', () => {
 
     await waitForExpect(() => {
       // force to use the latest version
-      // see https://github.com/airbnb/enzyme/issues/1233
+      //  see https://github.com/airbnb/enzyme/issues/1233
       wrapper.update();
-
       const btn = wrapper.find('button');
       btn.simulate('click');
       wrapper.update();

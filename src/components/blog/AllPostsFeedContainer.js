@@ -49,6 +49,7 @@ export class AllPostsFeedContainer extends Component {
     this.toggleLoadMore();
 
     fetchMore({
+      
       // overwrite existing variables
       variables: {
         skip: data.allPosts.length

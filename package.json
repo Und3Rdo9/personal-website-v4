@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "apollo-boost": "^0.1.6",
+    "apollo-boost": "^0.1.10",
     "date-fns": "^1.29.0",
     "graphql": "^0.13.2",
     "loaders.css": "^0.1.2",
@@ -30,8 +30,9 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --env=jsdom --no-cache",
+    "eject": "react-scripts eject",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --env=jsdom"
   },
   "devDependencies": {
     "enzyme": "^3.3.0",
