@@ -2,8 +2,8 @@
     "name": "Tim Bakkum - Amsterdam based front-end developer",
     "short_name": "Tim Bakkum",
     "lang": "en",
-    "start_url": "/index.html",
-    "display": "browser",
+    "start_url": "/",
+    "display": "minimal-ui",
     "theme_color": "#ffeb3b",
     "background_color": "#ffeb3b",
     "icons": [
