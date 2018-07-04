@@ -1,13 +1,13 @@
 // COLORS
-$theme-color-primary:     #FFEB3B;
-$theme-color-secondary:   #FFF59D;
-$theme-color-tertiary:    #000000;
-$theme-color-quarternary: #F5F5F5;
+$theme-color-primary: #ffeb3b;
+$theme-color-secondary: #fff59d;
+$theme-color-tertiary: #000000;
+$theme-color-quarternary: rgb(249, 248, 243);
 
-$theme-color-dark:        #FDD835;
+$theme-color-dark: #fdd835;
 
-$white:                   white;
-$black:                   #242729;
+$white: white;
+$black: #242729;
 
 // LAYOUT
 $header-height: 75px;
@@ -15,23 +15,23 @@ $container-padding: 16px;
 $container-max-width: 1200px;
 
 // FONTS
-$font-path:               'assets/fonts';
-$font-name:               'EuclidCircularBTrial';
-$theme-font-primary:      'Font';
+$font-path: 'assets/fonts';
+$font-name: 'EuclidCircularBTrial';
+$theme-font-primary: 'Font';
 
-$fw-light:    300;
-$fw-regular:  400;
-$fw-medium:   500;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
 $fw-semibold: 600;
-$fw-bold:     700;
+$fw-bold: 700;
 
 @mixin fontdef-woff($font-path, $font-name, $font-type) {
   src: url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.woff2')
-  format('woff2'),
-  url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.woff')
-  format('woff'),
-  url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.ttf')
-  format('truetype');
+      format('woff2'),
+    url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.woff')
+      format('woff'),
+    url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.ttf')
+      format('truetype');
 }
 // BEGIN Light
 @font-face {
