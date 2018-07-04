@@ -13,6 +13,7 @@ query contentPage($slug: String!) {
     coverImage {
       url
     }
+    metaDescription
   }
 }
 `;
@@ -28,6 +29,7 @@ const PostPageContainer = ( {match} ) => (
               title={data.ContentPage.title}
               coverImage={data.ContentPage.coverImage}
               content={data.ContentPage.content}
+              metaDescription={data.ContentPage.metaDescription}
             />
           )
         }
