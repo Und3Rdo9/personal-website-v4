@@ -8,6 +8,7 @@
 
 # production
 /build
+!/build/_redirects
 
 # styles
 src/**/*.css
