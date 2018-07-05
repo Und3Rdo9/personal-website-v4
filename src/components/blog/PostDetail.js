@@ -4,6 +4,7 @@ import Container from './../common/Container';
 import Section from './../common/Section';
 import ReactMarkdown from 'react-markdown';
 import { format } from 'date-fns';
+import Helmet from 'react-helmet';
 
 const PostDetail = ({
   title,
@@ -11,10 +12,15 @@ const PostDetail = ({
   tags,
   authorName,
   dateAndTime,
-  content
+  content,
+  metaDescription
 }) => {
   return (
     <article className="post-detail">
+      <Helmet>
+        <title>{title} - Tim Bakkum | Amsterdam based front-end developer</title>
+        <meta name="description" content={metaDescription} />
+      </Helmet>
       <figure className="post-detail__figure">
         <img src={coverImage} alt={title} className="post-detail__image" />
         <div className="post-detail__meta">

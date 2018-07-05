@@ -18,6 +18,7 @@ export const GET_POST = gql`
       coverImage {
         url
       }
+      metaDescription
     }
   }
 `;
@@ -38,6 +39,7 @@ const PostPageContainer = ({ match }) => (
             tags={data.Post.tags}
             content={data.Post.content}
             dateAndTime={data.Post.dateAndTime}
+            metaDescription={data.Post.metaDescription}
           />
         );
       } else {
