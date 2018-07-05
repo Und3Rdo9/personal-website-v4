@@ -16,22 +16,24 @@ $container-max-width: 1200px;
 
 // FONTS
 $font-path: 'assets/fonts';
-$font-name: 'EuclidCircularBTrial';
+$font-name: 'EuclidCircularB';
 $theme-font-primary: 'Font';
 
 $fw-light: 300;
 $fw-regular: 400;
-$fw-medium: 500;
-$fw-semibold: 600;
 $fw-bold: 700;
 
 @mixin fontdef-woff($font-path, $font-name, $font-type) {
-  src: url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.woff2')
+  src: url('#{$font-path}/#{$font-name}-#{$font-type}-WebS.eot');
+  src: url('#{$font-path}/#{$font-name}-#{$font-type}-WebS.eot?#iefix') format('embedded-opentype'),
+    url('#{$font-path}/#{$font-name}-#{$font-type}-WebS.woff2')
       format('woff2'),
-    url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.woff')
+    url('#{$font-path}/#{$font-name}-#{$font-type}-WebS.woff')
       format('woff'),
-    url('#{$font-path}/#{$font-name}-#{$font-type}-WebTrial.ttf')
-      format('truetype');
+    url('#{$font-path}/#{$font-name}-#{$font-type}-WebS.ttf')
+      format('truetype'),
+      url('#{$font-path}/#{$font-name}-#{$font-type}-WebS.svg##{$theme-font-primary}')
+      format('svg');
 }
 // BEGIN Light
 @font-face {
