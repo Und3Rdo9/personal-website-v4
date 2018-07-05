@@ -6,7 +6,7 @@ import PostFeed from './PostFeed';
 
 const GET_POSTS = gql`
 query {
-  allPosts(orderBy: dateAndTime_DESC, first: 3) {
+  allPosts(orderBy: dateAndTime_DESC, first: 3, filter: {isPublished: true}) {
     title
     summary
     slug
@@ -23,7 +23,7 @@ query {
 */
 const LatestPostsFeedContainer = () => (
   <Query query={GET_POSTS}>
-    {( { loading, error, data } ) => {
+    {({ loading, error, data }) => {
       if (loading) return <SectionLoader isActive={true} />;
       if (error) return <div>Error :( </div>;
       if (data.allPosts.length) {

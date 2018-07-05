@@ -7,7 +7,7 @@ import { POSTS_PER_PAGE } from './../../config';
 
 export const GET_ALL_POSTS = gql`
   query getAllPosts($skip: Int!, $first: Int!) {
-    allPosts(orderBy: dateAndTime_DESC, skip: $skip, first: $first) {
+    allPosts(orderBy: dateAndTime_DESC, skip: $skip, first: $first, filter: {isPublished: true}) {
       title
       summary
       slug
@@ -49,7 +49,7 @@ export class AllPostsFeedContainer extends Component {
     this.toggleLoadMore();
 
     fetchMore({
-      
+
       // overwrite existing variables
       variables: {
         skip: data.allPosts.length
