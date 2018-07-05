@@ -40,6 +40,10 @@ const PostDetail = ({
             <ReactMarkdown source={content} />
           </section>
         </Section>
+        <Section>
+          <h6>Comments</h6>
+          <p>Thanks for reading my article. Currently comments are unavailable. I'm working on SSR and implementing comments. Until then, feel free to contact me in any other way.</p>
+        </Section>
       </Container>
     </article>
   );
