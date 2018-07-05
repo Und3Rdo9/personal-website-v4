@@ -9,8 +9,8 @@ const ContentPage = ({ title, coverImage, content, metaDescription }) => {
   return (
     <article className="page">
       <Helmet>
-          <title>{title} - Tim Bakkum | Amsterdam based front-end developer</title>
-          <meta name="description" content={metaDescription} />
+        <title>{title} - Tim Bakkum | Amsterdam based front-end developer</title>
+        <meta name="description" content={metaDescription} />
       </Helmet>
       <Container>
         <h1 className="page__title">{title}</h1>

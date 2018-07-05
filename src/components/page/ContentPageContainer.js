@@ -18,28 +18,28 @@ query contentPage($slug: String!) {
 }
 `;
 
-const PostPageContainer = ( {match} ) => (
+const PostPageContainer = ({ match }) => (
   <Query query={GET_PAGE} variables={{ slug: match.params.slug }}>
-    {( { loading, error, data } ) => {
+    {({ loading, error, data }) => {
       if (loading) return <SectionLoader isActive={true} />;
       if (error) return <div>Error :(</div>;
-        if (data.ContentPage) {
-          return (
-            <ContentPage
-              title={data.ContentPage.title}
-              coverImage={data.ContentPage.coverImage}
-              content={data.ContentPage.content}
-              metaDescription={data.ContentPage.metaDescription}
-            />
-          )
-        }
-        else {
-          return (
-            <article>
-              <p>Sorry, this page has not been found.</p>
-            </article>
-          )
-        }
+      if (data.ContentPage) {
+        return (
+          <ContentPage
+            title={data.ContentPage.title}
+            coverImage={data.ContentPage.coverImage}
+            content={data.ContentPage.content}
+            metaDescription={data.ContentPage.metaDescription}
+          />
+        )
+      }
+      else {
+        return (
+          <article>
+            <p>Sorry, this page has not been found.</p>
+          </article>
+        )
+      }
 
     }}
   </Query>
